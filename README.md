@@ -4,4 +4,3 @@
 
 A simple app to test context on Expo
 
-Live version: https://snack.expo.io/@git/github.com/iubar/context-demo
