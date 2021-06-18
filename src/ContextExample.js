@@ -1,20 +1,25 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import {ThemeContext, themes} from './theme-context';
-import ThemedButton from './themed-button';
+import {ThemeContext, themes} from './ThemeContext';
+import ThemedButton from './ThemedButton';
+import ThemedButton2 from './ThemedButton2';
 
 function Toolbar(props) {
     return (
-      <ThemedButton title="ok1" onPress={props.changeTheme}>
-        Change Theme
-      </ThemedButton>
+      <ThemedButton onPress={props.changeTheme} />
     );
   }
+
+  function Toolbar2(props) {
+    return (
+      <ThemedButton2 title="Show context" />
+    );
+  }  
 
 export default class ContextExample extends React.Component {
 
   state = {
-    theme: themes.light,
+    theme: themes.light, // valore iniziale
   };
 
     constructor(props) {
@@ -22,7 +27,7 @@ export default class ContextExample extends React.Component {
       }
 
         toggleTheme = () => {
-          console.log("pressed..." + JSON.stringify(this.state.theme));
+          console.log("toggleTheme()..." + JSON.stringify(this.state.theme));
           this.setState(state => ({
             theme:
               state.theme === themes.dark
@@ -32,15 +37,17 @@ export default class ContextExample extends React.Component {
         }
 
       render() {
+        console.log('render() di ContextExample...' );
+        let txt = JSON.stringify(this.state.theme);
         return (
-          <View>
-            <ThemeContext.Provider value={this.state.theme}>
+          <View style={{flex: 1}}>
+            <ThemeContext.Provider value={{theme: this.state.theme, pippo: 'pluto'}}>
               <Toolbar changeTheme={this.toggleTheme} />
+              <Toolbar2 changeTheme={this.toggleTheme} />
             </ThemeContext.Provider>
-            <View>
-            <ThemedButton title="ok" />
+            <Text>{txt}</Text>
             </View>
-          </View>
+ 
         );
       }
     }
