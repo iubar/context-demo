@@ -12,7 +12,7 @@ export const themes = {
 };
 
 export const ThemeContext = React.createContext({
-  // theme: themes.dark // it'soptional
+  // theme: themes.dark // it's optional
 }
 );
 
