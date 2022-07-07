@@ -4,13 +4,13 @@ import {ThemeContext, themes} from './ThemeContext';
 import ThemedButton from './ThemedButton';
 import ThemedButton2 from './ThemedButton2';
 
-function Toolbar(props) {
+function CustomButton(props) {
     return (
-      <ThemedButton onPress={props.changeTheme} />
+      <ThemedButton onPress={props.customEvent} />
     );
   }
 
-  function Toolbar2(props) {
+  function CustomButton2(props) {
     return (
       <ThemedButton2 title="Show context" />
     );
@@ -40,12 +40,18 @@ export default class ContextExample extends React.Component {
         console.log('render() di ContextExample...' );
         let txt = JSON.stringify(this.state.theme);
         return (
-          <View style={{flex: 1}}>
+          <View style={{flex: 1, alignItems:'center', justifyContent: 'center', padding: 20 }}>
             <ThemeContext.Provider value={{theme: this.state.theme, pippo: 'pluto'}}>
-              <Toolbar changeTheme={this.toggleTheme} />
-              <Toolbar2 changeTheme={this.toggleTheme} />
+              <View style={{flex: 0, padding: 20 }}>
+                <CustomButton customEvent={this.toggleTheme} />
+              </View>
+              <View style={{flex: 0, padding: 20 }}>
+                <CustomButton2 customEvent={this.toggleTheme} />
+              </View>
             </ThemeContext.Provider>
-            <Text>{txt}</Text>
+            <View style={{flex: 0, padding: 20 }}> 
+              <Text>{txt}</Text>
+            </View>
             </View>
  
         );

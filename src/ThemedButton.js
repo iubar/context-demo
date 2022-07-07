@@ -20,13 +20,13 @@ export default class ThemedButton extends React.Component {
     //console.log('...theme is ' + JSON.stringify(theme));
     //console.log('...props are ' + JSON.stringify(props));
     return (
-      <View style={{padding: 12,  justifyContent: 'center', textAlign: 'center'}}>
+      <View style={{justifyContent: 'center', textAlign: 'center'}}>
       <Button   
         {...props}
         mode="contained"
         labelStyle={{ color: theme.foreground}}        
         color={theme.background}      
-      >Toggle (change context)</Button>
+      >Toggle context</Button>
       </View>
     );
   }

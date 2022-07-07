@@ -28,8 +28,6 @@ export default function App() {
   return (
       <SafeAreaView style={{      
       flex: 1,      
-      height: 300,
-      padding: 120                    
       }}>
       <ContextExample />
       </SafeAreaView>
