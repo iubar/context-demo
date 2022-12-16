@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { StyleSheet, Button, View, SafeAreaView, Text, Alert } from 'react-native';
 import ContextExample from './src/ContextExample';
 import { NavigationContainer } from '@react-navigation/native';
@@ -18,18 +18,19 @@ import { createStackNavigator } from '@react-navigation/stack';
 // }
 
 export default function App() {
-  if(false) {
-  return (
-      <NavigationContainer>
-        <MyStack />
-      </NavigationContainer>
-    );
-  }
-  return (
-      <SafeAreaView style={{      
-      flex: 1,      
-      }}>
-      <ContextExample />
-      </SafeAreaView>
-    );
+	if (false) {
+		return (
+			<NavigationContainer>
+				<MyStack />
+			</NavigationContainer>
+		);
+	}
+	return (
+		<SafeAreaView
+			style={{
+				flex: 1,
+			}}>
+			<ContextExample />
+		</SafeAreaView>
+	);
 }
