@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Button, View, SafeAreaView, Text, Alert } from 'react-native';
+import { StyleSheet, Button, View, Text, Alert } from 'react-native';
 import ContextExample from './src/ContextExample';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -26,11 +26,11 @@ export default function App() {
 		);
 	}
 	return (
-		<SafeAreaView
+		<View
 			style={{
 				flex: 1,
 			}}>
 			<ContextExample />
-		</SafeAreaView>
+		</View>
 	);
 }

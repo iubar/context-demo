@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Button, View, SafeAreaView, Text, Alert } from 'react-native';
+import { StyleSheet, Button, View, Text, Alert } from 'react-native';
 import { ThemeContext } from './ThemeContext';
 
 export default class ThemedButton2 extends React.Component {

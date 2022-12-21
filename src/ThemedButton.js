@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, SafeAreaView, Text, Alert } from 'react-native';
+import { StyleSheet, View, Text, Alert } from 'react-native';
 import { ThemeContext } from './ThemeContext';
 import { Button } from 'react-native-paper';
 
