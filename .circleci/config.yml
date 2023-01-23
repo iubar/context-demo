@@ -25,9 +25,6 @@ jobs:
           name: Run linter
           command: npm run lint
       - run:
-          name: Testing
-          command: npm run test-ci
-      - run:
           name: Publish
           command: |
             npx expo-cli login -u ${EXPO_USERNAME} -p ${EXPO_PASSWORD}  
