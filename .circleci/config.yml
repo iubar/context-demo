@@ -28,4 +28,4 @@ jobs:
           name: Publish
           command: |
             npx eas-cli diagnostics  
-            npx expo-cli publish --non-interactive --release-channel default
+            npx eas-cli update --non-interactive --branch master --message "New version"
