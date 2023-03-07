@@ -24,6 +24,12 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4d8d65a7-7e9f-4702-ad2c-9c482ca3cfbd"
+      }
+    },
+    "owner": "borgo"
   }
 }
